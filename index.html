@@ -15,7 +15,7 @@
             font-family: 'Arial', sans-serif;
             line-height: 1.6;
             background: #f8f9fa;
-            color: #333;
+            color: #333; /* ФИКС: базовый цвет текста */
         }
         
         .container {
@@ -126,11 +126,12 @@
         /* Sections */
         .section {
             padding: 5rem 0;
+            color: #333; /* ФИКС: цвет текста для светлых секций */
         }
         
         .section-dark {
             background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            color: white;
+            color: white; /* ФИКС: цвет текста для темных секций */
         }
         
         .section-title {
@@ -170,6 +171,7 @@
             box-shadow: 0 10px 30px rgba(0,0,0,0.1);
             transition: all 0.3s ease;
             border: 1px solid #e9ecef;
+            color: #333; /* ФИКС: цвет текста в карточках */
         }
         
         .card:hover {
@@ -183,12 +185,32 @@
             font-size: 1.5rem;
         }
         
+        .card h4 {
+            color: #333; /* ФИКС: цвет подзаголовков */
+            margin-bottom: 1rem;
+        }
+        
         .card img {
             width: 100%;
             height: 200px;
             object-fit: cover;
             border-radius: 10px;
             margin-bottom: 1.5rem;
+        }
+        
+        .card p, .card li, .card ul {
+            color: #333; /* ФИКС: цвет текста в карточках */
+        }
+        
+        .section-dark .card {
+            color: white; /* ФИКС: цвет текста в карточках на темном фоне */
+        }
+        
+        .section-dark .card p,
+        .section-dark .card li,
+        .section-dark .card ul,
+        .section-dark .card h4 {
+            color: white; /* ФИКС: цвет текста в карточках на темном фоне */
         }
         
         /* Stats */
@@ -204,6 +226,7 @@
             padding: 2rem;
             border-radius: 10px;
             backdrop-filter: blur(10px);
+            color: white;
         }
         
         .stat-number {
@@ -232,6 +255,10 @@
             font-size: 1.3rem;
         }
         
+        .footer-section p, .footer-section a {
+            color: #ccc; /* ФИКС: цвет текста в футере */
+        }
+        
         .copyright {
             text-align: center;
             padding-top: 2rem;
@@ -256,6 +283,7 @@
     </style>
 </head>
 <body>
+    <!-- ВАШЕ СОДЕРЖИМОЕ ОСТАЕТСЯ ТАКИМ ЖЕ -->
     <header>
         <nav class="container">
             <div class="logo">
@@ -487,7 +515,7 @@
             <div class="grid grid-4">
                 <div class="card">
                     <h4>📊 TubeBuddy</h4>
-                    <p>Все-in-one инструмент для анализа</p>
+                    <p>All-in-one инструмент для анализа</p>
                 </div>
                 <div class="card">
                     <h4>🔍 VidIQ</h4>
